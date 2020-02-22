@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: simple-jwt-api
+  region: us-west-2
+
+nodeGroups:
+  - name: ng-1
+    instanceType: a1.medium
+    desiredCapacity: 10
+  - name: ng-2
+    instanceType: a1.medium
+    desiredCapacity: 2
