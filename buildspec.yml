@@ -7,8 +7,8 @@ phases:
   install:
     commands:
       - curl -sS -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator
-      - curl -sS -o kubectl https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
-      - chmod +x ./kubectl ./aws-iam-authenticator
+      - curl -sS -o kubectl https://storage.googleapis.com/kubernetes-release/release/v1.14.9/bin/linux/amd64/kubectl
+      - chmod +x ./kubectl
       - export PATH=$PWD/:$PATH
       - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
   pre_build:
